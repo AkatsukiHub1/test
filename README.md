@@ -230,13 +230,13 @@ local function runFarm()
 
     while farmEnabled do
         statusLabel.Text = "Status: Changing Island"
-        pcall(function() portalRemote:FireServer("SoulSociety") end)
+        pcall(function() portalRemote:FireServer("Judgement") end)
         task.wait(0.5)
         if not farmEnabled then break end
 
         statusLabel.Text = "Status: Teleporting"
-        pcall(function() hrp.CFrame = CFrame.new(-1345, 1618, 1590) end)
-        task.wait(5)
+        pcall(function() hrp.CFrame = CFrame.new(1071, 2, 1273) end)
+        task.wait(2)
         if not farmEnabled then break end
 
         statusLabel.Text = "Status: Changing Island"
@@ -246,7 +246,7 @@ local function runFarm()
 
         statusLabel.Text = "Status: Teleporting"
         pcall(function() hrp.CFrame = CFrame.new(-1272, 1, -1192) end)
-        task.wait(5)
+        task.wait(2)
     end
 end
 
